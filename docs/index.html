@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irmin Browser Tests</title>
+    <style>
+        .main {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 500;
+            margin: 0 auto 0 auto;
+            width: 75%;
+            height: 99vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .links {
+            margin-top: 3em;
+            font-size: 1.3em;
+        }
+
+        a {
+           text-decoration: none;
+           color: inherit;
+           border-bottom: grey thin solid; 
+        }
+
+        a:hover {
+            border-bottom: rgb(0, 177, 147) medium solid; 
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Irmin Browser Tests</h1>
+        <p>
+            All of the code is available on <a href="https://github.com/patricoferris/irmin-browser-tests">Github</a> under the MIT license.
+        </p>
+        <p>
+            These pages test various <a href="https://irmin.org">Irmin</a> backends in the browser using the <a href="https://ocaml.org/p/irmin-test/3.2.2">irmin-test</a> package.
+        </p>
+        <div class="links">
+            <a href="mem.html">In-memory</a>
+            <a href="indexeddb.html">IndexedDB</a>
+            <a href="irmin-server.html">Irmin-server<sup>*</sup></a>
+        </div>
+        <p style="font-size: small;">
+            <em>
+                <sup>*</sup>Requires <a href="https://github.com/mirage/irmin-server">irmin-server</a> to be running! See the <a href="https://github.com/patricoferris/irmin-browser-tests">README</a> for more details.
+            </em>
+        </p>
+    </div>
+</body>
+</html>

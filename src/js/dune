@@ -1,0 +1,31 @@
+(executable
+ (name test_irmin_mem)
+ (modules test_irmin_mem)
+ ; HACK to trick Alcotest to use ansi :))
+ (js_of_ocaml
+  (flags --setenv INSIDE_DUNE=1))
+ (modes js)
+ (libraries alcotest_js irmin.mem digestif.ocaml irmin-test))
+
+(executable
+ (name test_irmin_indexeddb)
+ (modules test_irmin_indexeddb)
+ ; HACK to trick Alcotest to use ansi :))
+ (js_of_ocaml
+  (flags --setenv INSIDE_DUNE=1))
+ (modes js)
+ (libraries alcotest_js irmin-indexeddb digestif.ocaml irmin-test))
+
+(executable
+ (name test_irmin_server_client)
+ (modules test_irmin_server_client)
+ ; HACK to trick Alcotest to use ansi :))
+ (js_of_ocaml
+  (flags --setenv INSIDE_DUNE=1))
+ (modes js)
+ (libraries
+  alcotest_js
+  irmin-client-jsoo
+  irmin.mem
+  digestif.ocaml
+  irmin-test))

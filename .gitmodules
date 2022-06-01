@@ -1,0 +1,12 @@
+[submodule "irmin"]
+	path = irmin
+	url = https://github.com/patricoferris/irmin
+[submodule "irmin-indexeddb"]
+	path = irmin-indexeddb
+	url = https://github.com/patricoferris/irmin-indexeddb
+[submodule "irmin-server"]
+	path = irmin-server
+	url = https://github.com/patricoferris/irmin-server
+[submodule "alcotest"]
+	path = alcotest
+	url = https://github.com/patricoferris/alcotest

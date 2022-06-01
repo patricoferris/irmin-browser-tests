@@ -1,0 +1,3 @@
+(library
+ (name alcotest_js)
+ (libraries irmin-test js_of_ocaml-lwt js_of_ocaml brr ansi))

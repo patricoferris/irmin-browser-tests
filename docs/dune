@@ -1,0 +1,21 @@
+(rule
+ (deps
+  %{workspace_root}/src/js/test_irmin_mem.bc.js
+  %{workspace_root}/src/js/test_irmin_indexeddb.bc.js
+  %{workspace_root}/src/js/test_irmin_server_client.bc.js)
+ (targets
+  test_irmin_mem.js
+  test_irmin_indexeddb.js
+  test_irmin_server_client.js)
+ (enabled_if
+  (= %{profile} release))
+ (mode promote)
+ (action
+  (progn
+   (copy %{workspace_root}/src/js/test_irmin_mem.bc.js test_irmin_mem.js)
+   (copy
+    %{workspace_root}/src/js/test_irmin_indexeddb.bc.js
+    test_irmin_indexeddb.js)
+   (copy
+    %{workspace_root}/src/js/test_irmin_server_client.bc.js
+    test_irmin_server_client.js))))
